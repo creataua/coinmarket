@@ -30,22 +30,6 @@ def get_monet(html):
     result_list = list(set(monet))
     return result_list
   
-# def monet_info(info_monet):
-#     soup = BeautifulSoup(html, 'lxml')
-#     #data = soup.find_all('tr')
-#     for item in info_monet:
-#         dc_attr = {'class': 'cmc-link', 'href': f'/currencies/{item}/'}
-#         #item_title = item.title()
-#         try:
-#             name = soup.find('a', dc_attr).find('p').text
-#             price = soup.find('a', dc_attr).parent.find_next_sibling()
-#             print(f"{name} - {price.text}")
-#         except AttributeError:
-#             print(f"Монета {item.title()} пропала с трендов Coinmarket")
-#             continue
-#         #print(data)
-#     #price_info = data.find('span').text
-#     #print(price_info)
 
 def main():
     html = get_url(url)
